@@ -1,0 +1,84 @@
+it is possible to get/fetch append remove elements from javascript
+
+definetion:
+1.DOm represent the page so that program can change the document structure, style and content.
+
+window is a global object attached with the document.
+
+ANY THING TO PERFORM ON DOM :
+1.Finding HTML Elements (eg find the h1)
+	we can find the elements in 3 ways
+      eg <h1 id="js"></h1>
+	- By Id (document.getElementById("js"))
+	- By ClassName (document.getElementsByClassName("tech"))
+	- By Tagname
+
+Note: The enhance version of (ByID, ByClassName, ByTagName)
+is querySelector. You can pass querySelector with id, name,tagname
+.In querySelector we dont have to explicitly mention id or name or tagname
+ querySelector select HTML elements by id, classname, tagname
+
+
+2. Changing:- innerHTML :
+HOW TO GET INNER CONTENT OF THE HTML :
+	- innerText (it will only take the text part)
+	- innerHTML (it will take the inner tag along with text)
+
+let val = document.querySelectorAll("p");
+console.log(val[2].setAttribute("class", "js"));
+
+//But what if we want to add multiple classes for a tag
+let val = document.querySelectorAll("p");
+val[2].classList.add("js","aditya");
+
+//To change the content inside the Tag
+val[2].textContent = "Hello Hitesh Sir, Thank You For Js"
+
+
+3. Add/ Insert/ Append/ Remove
+let title = document.createElement("h1");
+title.className = "title";
+title.style.fontSize = "25px";
+title.textContent = "hello JavaScript";
+//add to body
+document.body.appendChild(title);
+//Remove
+const ul = document.querySelector("ul");
+const lists = document.querySelectorAll(li");
+for(list of lists){
+  ul.removeChild(list);	
+}
+
+
+4. adding Event
+click, dbclick, mouseenter, mouseleave, mousehover, 
+input, change, blur, keypress, keyup
+
+EventListener take two Parameters
+document.addEventListener("click",function)
+
+DOM works on 3 main things
+-method (eg queryselector/getElementById/ByName/ByTagName)
+-sub-object (style)
+-properties (css properties)
+
+
+
+//today
+//alert
+alert("Hello")
+window.alert("Hello")
+both are same.
+
+//confirmation box
+confirm("Are you sure?");
+
+//prompt
+prompt("Enter your name:","Aditya");
+
+//EventListener
+listening event 
+document.addEventListerner("click", mouseClick);
+function mouseClick(){
+ 
+}

@@ -1,0 +1,158 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 name="i"></h1>
+    <ul name="i">
+        <li name="i" class="js">HTML</li>  
+    </ul>
+    <p>One</p>
+    <script>
+    //     //ROOT
+    //     // console.log(document);
+    //     // console.log(window.document);
+
+    //     //Element
+    //     // console.log(document.documentElement);
+
+    //     //Childrens
+    //     // console.log(document.body.children);
+    //     // console.log(document.body.firstChild); // it will give text as the first child because javascript considers blank space also.
+    //     // console.log(document.body.firstElementChild);//h1
+
+    //     //finding the document:
+    //    // ById, ByClassName, ByTagName, querySelector, querySelectorAll
+    //     // let val = document.getElementsByClassName("js");
+    //     // console.log(val);
+    //     // let val1 = document.getElementsByName("i");
+    //     // console.log(val1)
+
+           // Changing: 
+    //     let val = document.querySelectorAll("p");
+    //     val[0].setAttribute("class", "jss");
+    //     val[0].classList.add("adi","vic");
+
+        // Adding:
+        const addd= `
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+        `
+        let val = document.querySelectorAll("ul");
+        val[0].setAttribute("id", "new");
+        
+        val[0].innerHTML = addd;
+        // let upd = document.querySelectorAll("#new");
+        
+
+        console.log(val[0].style.backgroundColor="Red");
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <script src="https://dev.to/">
+        
+let container = document.querySelector(".as-imagegrid .as-imagegrid--7up .row");
+
+let list = container.querySelectorAll(".as-imagegrid-item .as-imagegrid-item-title");
+const finalItem= [];
+for (let item of list) {
+    
+    finalItem.push(item.textContent.split(" ").splice(0,1).join());
+}
+console.log(finalItem);
+
+
+
+
+let containerId = document.querySelector(".accordion-homepage");
+let addTab = document.createElement("section"); 
+let newContent = document.createTextNode("My New FAQ"); 
+addTab.appendChild(newContent); 
+containerId.appendChild(addTab); 
+addTab.setAttribute("id","newsection");
+let sectionById = document.getElementById("newsection");
+sectionById.style.background = "#FFFFFF";
+sectionById.style.padding = "16px 52px 16px 64px";
+sectionById.style.fontFamily = "'Google Sans', 'Google Sans Text', Roboto, sans-serif";
+sectionById.style.borderTop = "thin solid #a9acaa";
+sectionById.style.fontSize = ".875rem";
+sectionById.style.fontWeight ="500";
+
+
+let div = document.querySelector(".one-tel-number");
+div.innerText = "+91 6366256689";
+
+
+
+let nav = document.querySelector(".article .accordion-homepage");
+let section = document.createElement("section");
+
+section.className = "parent";
+section.appendChild(document.createElement("h3"));
+section.querySelector("h3").textContent = "My New FAQ";
+
+nav.appendChild(section);
+
+
+let mainDiv = document.querySelectorAll(".mytabs .diwali-deals-product-sale-pro .diwali-deals-product-sale-btn");
+
+mainDiv.forEach((e) => {
+
+    if(e.getAttribute("href") == "//www.samsung.com/in/smartphones/galaxy-z-fold4/buy/?modelCode=SM-F936BZKD"){
+        console.log("great");
+        e.addEventListener("mouseover")
+    
+    }
+
+} );
+
+let inputTab = document.getElementById("top-nav-search-input");
+inputTab.value = "Css Selector";
+let submit = document.querySelectorAll(".header-search .search-button");
+let form1 = document.getElementById("top-nav-search-form");
+
+
+let text = document.querySelector("btn-cta-big .login-btn-text");
+let mainButton = document.querySelector(".btn-cta-big");
+
+function mouseHover(){
+    text.style.background = "Red";
+}
+
+mainButton.addEventListener("mouseenter", mouseHover);
+
+
+let icon = document.querySelector(".icon-logo");
+icon.style.backgroundImage = "url('https://learn.ineuron.ai/_next/image?url=%2Fimages%2Fineuron-logo.png&w=750&q=75')"
+
+
+
+
+let listOfLaptops = document.querySelectorAll(".ps-title a");
+listOfLaptops.forEach((e) => {
+    if(e.getAttribute("href") == "//www.dell.com/en-in/shop/laptops-2-in-1-pcs/g15-gaming-laptop/spd/g-series-15-5520-laptop/d560823win9b"){
+        // let title = document.querySelectorAll(".ps-title");
+        // e.style.textAlignLast = 'right';
+        console.log(e);
+    }
+} );
+</script>
+</body>
+</html>
+
